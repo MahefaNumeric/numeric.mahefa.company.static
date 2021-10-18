@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Education &#8211; Mahefa Numeric</title>
+	<atom:link href="http://n.m.c/category/education/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>We are a digital companion</description>
+	<lastBuildDate>Sat, 29 May 2021 19:01:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/05/cropped-Mahefa-Numeric-Logo-32x32.png</url>
+	<title>Education &#8211; Mahefa Numeric</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Un premier aperçu de WSO2 Enterprise Integrator (EI)</title>
+		<link>/architecture/wso2-ei-get-started/</link>
+					<comments>/architecture/wso2-ei-get-started/#respond</comments>
+		
+		<dc:creator><![CDATA[Mahefa Abel]]></dc:creator>
+		<pubDate>Tue, 15 Sep 2020 01:51:29 +0000</pubDate>
+				<category><![CDATA[Architecture]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Education]]></category>
+		<category><![CDATA[Industry]]></category>
+		<category><![CDATA[Management]]></category>
+		<category><![CDATA[Technology]]></category>
+		<guid isPermaLink="false">http://wp.leverage.demo/home-1/?p=62</guid>
+
+					<description><![CDATA[Cela est surprenant car il a été dit que Synapse et AXIS2 devaient être remplacés par un autre moteur de...]]></description>
+										<content:encoded><![CDATA[
+<p>Cela est surprenant car il a été dit que Synapse et AXIS2 devaient être remplacés par un autre moteur de médiation ainsi que le fait que tout serait REST / JSON.</p>
+
+
+
+<p>Il semble maintenant que ce ne soit pas le cas. Cela signifie-t-il qu&#8217;il s&#8217;agit d&#8217;une version intermédiaire?</p>
+
+
+
+<p>Le successeur de l&#8217;Enterprise Service Bus était en cours de développement et un nouveau produit a été lancé lors de la WSO2Con USA 2017. Il s&#8217;appelle WSO2 Enterprise Integrator et dans le blog, nous examinerons ce qui est réellement dans le produit.</p>
+
+
+
+<p>Qu&#8217;est-ce que WSO2 EI?<br>WSO2 Enterprise Integrator-1.png Selon la documentation fournie avec la version M2 du produit EI.</p>
+
+
+
+<p>Product EI est une distribution unifiée de WSO2 Enterprise Integrator, Application Server, Data Services Server aux côtés des environnements d&#8217;exécution Analytics, Business Process et Message Broker. Avec la capacité d&#8217;un répertoire de composants partagé avec une gestion basée sur le profil de chaque runtime.</p>
+
+
+
+<p>En bref, c’est ESB, DSS, AS avec les temps d’exécution de trois autres produits, DAS, BPS et MB.</p>
+
+
+
+<p>Ceci est visible lorsque nous regardons l&#8217;onglet principal. Nous voyons clairement les fonctionnalités Applications (fonctionnalité AS), Proxy et Service Bus (même étonnamment similaires à l&#8217;actuel WSO2 ESB (5.0.0).</p>
+
+
+
+<p>Plus surprenant, nous voyons même le service AAR qui indique que nous avons toujours Axis2 inclus dans le produit. Un test rapide avec le fichier CAR ESB actuel confirme que Synapse / Axis2 est toujours le moteur Medation / Webservice du produit.</p>
+
+
+
+<p>Nous pensons que c&#8217;est vrai car ce n&#8217;est pas sur Carbon 5 mais plutôt sur Carbon 4.4.14. Il est donc probable que ce soit une première étape dans le processus de création d&#8217;un nouveau produit.</p>
+
+
+
+<p>Intégration à profusion</p>
+
+
+
+<p>Il existe une nouvelle structure dans ce cas avec un répertoire principal pour WSO2 EI et des sous-répertoires sous / WSO2 pour chacun des produits.</p>
+
+
+
+<p>Dans chacun de ces répertoires, vous retrouverez la structure du produit. Cela se traduit cependant par une installation de presque 1 Go (installation propre).</p>
+
+
+
+<p>Par défaut, les produits sont installés avec un décalage de port de 1 entre eux. Sur un hôte local, voici les adresses de l&#8217;interface utilisateur de gestion:</p>
+
+
+
+<p>WSO2 EI https: // localhost: 9443 / carbone<br>WSO2 DAS https: // localhost: 9444 / carbon /<br>WSO2 BPS https: // localhost: 9445 / carbon /<br>WSO2 MB https: // localhost: 9446 / carbon /<br></p>
+
+
+
+<p>Compatibilité<br>Nous avons rapidement essayé certains fichiers CAR que nous avions sur nos machines locales et ils ont fonctionné sans accroc. Cela ne veut pas dire que tout est nécessairement compatible. Un test approfondi sur une multitude d&#8217;artefacts devrait donner plus d&#8217;informations sur la compatibilité des artefacts existants (sur ESB 5.0.0) avec WSO2 EI.</p>
+
+
+
+<p>Gestion des API<br>Comme l&#8217;ESB actuel, le WSO2 EI a également la possibilité de pointer vers un gestionnaire d&#8217;API externe. Dans ce cas, la passerelle et l&#8217;éditeur pointent vers un gestionnaire d&#8217;API en dehors de l&#8217;ESB.<br><br>Conclusion<br>WSO2 Enterprise Integrator semble être un produit tout-en-un pour certains des produits les plus couramment utilisés dans l&#8217;espace d&#8217;intégration d&#8217;entreprise. Il vous offre des services de bus de services, de traitement d&#8217;entreprise, d&#8217;intégration de données et d&#8217;application ainsi que des capacités de livraison et de surveillance garanties dans une configuration complète.</p>
+
+
+
+<p>Des produits tels que WSO2 Identity Server, WSO2 API Gateway et d&#8217;autres peuvent compléter cette offre Enterprise Integrator pour créer une architecture pour la plupart, sinon la totalité, de vos besoins d&#8217;intégration.</p>
+
+
+
+<p>Jetez-y un œil et téléchargez-le sur http://wso2.com/integration</p>
+
+
+
+<p>Si vous avez des questions sur ce blog, contactez-nous via la section commentaires de ce blog. Consultez également nos tutoriels WSO2, webinaires ou livres blancs pour plus d&#8217;informations techniques. Besoin de soutien? Nous fournissons une assistance produit WSO2, une assistance au développement WSO2, une assistance opérationnelle WSO2 et des programmes de formation WSO2.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/architecture/wso2-ei-get-started/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

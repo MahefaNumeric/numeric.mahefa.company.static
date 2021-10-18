@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Industry &#8211; Mahefa Numeric</title>
+	<atom:link href="http://n.m.c/tag/industry/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>We are a digital companion</description>
+	<lastBuildDate>Sat, 29 May 2021 19:01:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/05/cropped-Mahefa-Numeric-Logo-32x32.png</url>
+	<title>Industry &#8211; Mahefa Numeric</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Un premier aperçu de WSO2 Enterprise Integrator (EI)</title>
+		<link>/architecture/wso2-ei-get-started/</link>
+					<comments>/architecture/wso2-ei-get-started/#respond</comments>
+		
+		<dc:creator><![CDATA[Mahefa Abel]]></dc:creator>
+		<pubDate>Tue, 15 Sep 2020 01:51:29 +0000</pubDate>
+				<category><![CDATA[Architecture]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Education]]></category>
+		<category><![CDATA[Industry]]></category>
+		<category><![CDATA[Management]]></category>
+		<category><![CDATA[Technology]]></category>
+		<guid isPermaLink="false">http://wp.leverage.demo/home-1/?p=62</guid>
+
+					<description><![CDATA[Cela est surprenant car il a été dit que Synapse et AXIS2 devaient être remplacés par un autre moteur de...]]></description>
+										<content:encoded><![CDATA[
+<p>Cela est surprenant car il a été dit que Synapse et AXIS2 devaient être remplacés par un autre moteur de médiation ainsi que le fait que tout serait REST / JSON.</p>
+
+
+
+<p>Il semble maintenant que ce ne soit pas le cas. Cela signifie-t-il qu&#8217;il s&#8217;agit d&#8217;une version intermédiaire?</p>
+
+
+
+<p>Le successeur de l&#8217;Enterprise Service Bus était en cours de développement et un nouveau produit a été lancé lors de la WSO2Con USA 2017. Il s&#8217;appelle WSO2 Enterprise Integrator et dans le blog, nous examinerons ce qui est réellement dans le produit.</p>
+
+
+
+<p>Qu&#8217;est-ce que WSO2 EI?<br>WSO2 Enterprise Integrator-1.png Selon la documentation fournie avec la version M2 du produit EI.</p>
+
+
+
+<p>Product EI est une distribution unifiée de WSO2 Enterprise Integrator, Application Server, Data Services Server aux côtés des environnements d&#8217;exécution Analytics, Business Process et Message Broker. Avec la capacité d&#8217;un répertoire de composants partagé avec une gestion basée sur le profil de chaque runtime.</p>
+
+
+
+<p>En bref, c’est ESB, DSS, AS avec les temps d’exécution de trois autres produits, DAS, BPS et MB.</p>
+
+
+
+<p>Ceci est visible lorsque nous regardons l&#8217;onglet principal. Nous voyons clairement les fonctionnalités Applications (fonctionnalité AS), Proxy et Service Bus (même étonnamment similaires à l&#8217;actuel WSO2 ESB (5.0.0).</p>
+
+
+
+<p>Plus surprenant, nous voyons même le service AAR qui indique que nous avons toujours Axis2 inclus dans le produit. Un test rapide avec le fichier CAR ESB actuel confirme que Synapse / Axis2 est toujours le moteur Medation / Webservice du produit.</p>
+
+
+
+<p>Nous pensons que c&#8217;est vrai car ce n&#8217;est pas sur Carbon 5 mais plutôt sur Carbon 4.4.14. Il est donc probable que ce soit une première étape dans le processus de création d&#8217;un nouveau produit.</p>
+
+
+
+<p>Intégration à profusion</p>
+
+
+
+<p>Il existe une nouvelle structure dans ce cas avec un répertoire principal pour WSO2 EI et des sous-répertoires sous / WSO2 pour chacun des produits.</p>
+
+
+
+<p>Dans chacun de ces répertoires, vous retrouverez la structure du produit. Cela se traduit cependant par une installation de presque 1 Go (installation propre).</p>
+
+
+
+<p>Par défaut, les produits sont installés avec un décalage de port de 1 entre eux. Sur un hôte local, voici les adresses de l&#8217;interface utilisateur de gestion:</p>
+
+
+
+<p>WSO2 EI https: // localhost: 9443 / carbone<br>WSO2 DAS https: // localhost: 9444 / carbon /<br>WSO2 BPS https: // localhost: 9445 / carbon /<br>WSO2 MB https: // localhost: 9446 / carbon /<br></p>
+
+
+
+<p>Compatibilité<br>Nous avons rapidement essayé certains fichiers CAR que nous avions sur nos machines locales et ils ont fonctionné sans accroc. Cela ne veut pas dire que tout est nécessairement compatible. Un test approfondi sur une multitude d&#8217;artefacts devrait donner plus d&#8217;informations sur la compatibilité des artefacts existants (sur ESB 5.0.0) avec WSO2 EI.</p>
+
+
+
+<p>Gestion des API<br>Comme l&#8217;ESB actuel, le WSO2 EI a également la possibilité de pointer vers un gestionnaire d&#8217;API externe. Dans ce cas, la passerelle et l&#8217;éditeur pointent vers un gestionnaire d&#8217;API en dehors de l&#8217;ESB.<br><br>Conclusion<br>WSO2 Enterprise Integrator semble être un produit tout-en-un pour certains des produits les plus couramment utilisés dans l&#8217;espace d&#8217;intégration d&#8217;entreprise. Il vous offre des services de bus de services, de traitement d&#8217;entreprise, d&#8217;intégration de données et d&#8217;application ainsi que des capacités de livraison et de surveillance garanties dans une configuration complète.</p>
+
+
+
+<p>Des produits tels que WSO2 Identity Server, WSO2 API Gateway et d&#8217;autres peuvent compléter cette offre Enterprise Integrator pour créer une architecture pour la plupart, sinon la totalité, de vos besoins d&#8217;intégration.</p>
+
+
+
+<p>Jetez-y un œil et téléchargez-le sur http://wso2.com/integration</p>
+
+
+
+<p>Si vous avez des questions sur ce blog, contactez-nous via la section commentaires de ce blog. Consultez également nos tutoriels WSO2, webinaires ou livres blancs pour plus d&#8217;informations techniques. Besoin de soutien? Nous fournissons une assistance produit WSO2, une assistance au développement WSO2, une assistance opérationnelle WSO2 et des programmes de formation WSO2.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/architecture/wso2-ei-get-started/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How React Native Development Can Save Your Business</title>
+		<link>/development/react-native-help-you-business/</link>
+					<comments>/development/react-native-help-you-business/#respond</comments>
+		
+		<dc:creator><![CDATA[Mahefa Abel]]></dc:creator>
+		<pubDate>Tue, 15 Sep 2020 01:02:50 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Architecture]]></category>
+		<category><![CDATA[Education]]></category>
+		<category><![CDATA[Industry]]></category>
+		<category><![CDATA[Management]]></category>
+		<category><![CDATA[Technology]]></category>
+		<guid isPermaLink="false">http://wp.leverage.demo/home-1/?p=57</guid>
+
+					<description><![CDATA[Nowadays a lot of businesses have to find themselves in a new reality caused by the coronavirus pandemic. The crisis...]]></description>
+										<content:encoded><![CDATA[
+<p>Nowadays a lot of businesses have to find themselves in a new reality caused by the coronavirus pandemic. The crisis will affect the vast majority of industries, so we decided to prepare three scenarios in which&nbsp;cross-platform app development&nbsp;may prove to be a game changer. What are these scenarios and how to weather the coronavirus storm? Read the article and find out.</p>
+
+
+
+<p>Many businesses are forced to go online as their offline channels are suffering government-imposed restrictions. Others are experiencing more traffic than ever, putting their applications and infrastructure under heavy load that they were never designed for.</p>
+
+
+
+<p>In such a world, what matters is who gets to the users faster and at the lowest cost. And that’s where cross-platform and React Native come into play.</p>
+
+
+
+<h2>What is a cross-platform app development?</h2>
+
+
+
+<p>Cross-platform development is the process of building and delivering apps that can run across multiple device platforms, maximizing the code sharing and reducing the overall maintenance cost. Rather than creating individual applications for every single platform, you create a single – universal – codebase, that is shared among all of them at the same time.</p>
+
+
+
+<p>Such an approach is particularly popular amongst mobile apps, where the interface and business logic are usually similar and doesn’t change much between Android and iOS. With the right set of tools, it is also possible to share the code across different environments, including Web, desktop (both Mac and Windows) as well as TVs (tvOS) or even your car (via CarPlay).</p>
+
+
+
+<p>React Native is the most popular framework on the market for delivering universal applications that can work across all the aforementioned platforms. It is a JavaScript framework that has been created and open-sourced by Facebook.</p>
+
+
+
+<p>In simple words, React Native works like this: you create the business logic of your app once and reuse this code on the other versions of it (mobile, web, desktop, etc.), keeping the individual look and feel and platform-specific vibe of the app. The reusability of the code may vary due to the complexity of the app.</p>
+
+
+
+<p>You compose your application from arbitrary components. React Native then takes these components and renders them for you, using the APIs ( depending on what platform you’re currently working on). Such an approach is called declarative because you declare what you want your application to look like.</p>
+
+
+
+<p>As a result, your code is not tied to any platform, which is the first step towards building a universal application. In other words, the same code can be used to create individual versions of your app (mobile, web, desktop, etc.) while still maintaining the individual look and feel of a given platform.</p>
+
+
+
+<h3>Why is it worth to get into cross-platform app development and React Native at all?</h3>
+
+
+
+<p>Firstly, when you have an app that runs on the three most popular platforms – iOS, Android (which together own more than 98% of the mobile operating system market), and Web, you significantly increase the reach of your business. It gives you an opportunity to approach new potential customers and adds news streams of revenue.</p>
+
+
+
+<h4>Speed of development and rich JavaScript ecosystem</h4>
+
+
+
+<p>Secondly, the most popular and most efficient framework used in creating cross-platform apps, React Native, is based on JavaScript. Thanks to that, the app development process is much faster because you see code-change results much quicker than when you rebuild the whole Native app, install it on a device and then launch it.</p>
+
+
+
+<p>The process is also easier for developers because they can benefit from a rich JavaScript ecosystem that is still growing. Newer and newer libraries are appearing to make the process easier as well as current and well-matured ones with hundreds of developers contributing.</p>
+
+
+
+<h4>High availability of JavaScript developers</h4>
+
+
+
+<p>According to 2019&nbsp;<a href="https://insights.stackoverflow.com/survey/2019#technology">Stack Overflow Developer Survey</a>&nbsp;JS is still the most popular technology (seventh year in a row) which means a greater number of available developers, consecutively – it’s just more talent to choose from. It makes the community of JavaScript specialists more competitive what positively influences the community by making it more quality-oriented.</p>
+
+
+
+<h4>Code sharing</h4>
+
+
+
+<p>As I mentioned above, Android and iOS own a lion share of the mobile operating system market. Thanks to cross-platform app development the majority of produced code is cross-platform and can be used on both operating systems.</p>
+
+
+
+<p>React Native is not just a good solution from the potential cost and time savings. It is just the right thing to do. Reimplementing same logic and similar user interface across every single platform is just a waste of time and precious resources of your organization that could be utilized elsewhere, e.g., to deliver a new feature or innovate faster than your competition.</p>
+
+
+
+<p>Sometimes you’ll need to do some platform-specific tweaks to adapt to the platform standards, but the overall cost is greatly reduced if you need to maintain only one project, hire one team and maintain one app.</p>
+
+
+
+<h2>COVID-19 common business cases and how React Native can help</h2>
+
+
+
+<p>Here are the 3 most common situations the current coronavirus pandemic has probably thrown your business into and how the use of React Native can let you adapt quickly.</p>
+
+
+
+<h3 id="First_Point_Header">1. You are an offline business and want to quickly build your presence on all online platforms</h3>
+
+
+
+<p>It’s 2020, coronavirus spreads all over the world and your offline business is not performing well. Chances are that your revenue will steadily decline. . In order to stay afloat, you need to quickly go online. When you think about going online with your business, mobile and web apps are probably the first things that come to your mind. So, you need three apps – for iOS, Android and Web.</p>
+
+
+
+<p>But wait, if you’re facing the risk of not generating any revenue, there is no time for large investments like three teams of developers working on your mobile apps!</p>
+
+
+
+<p>It’s true but actually you don’t have to do it that way. With React Native, you can create one app that will run on iOS, Android and Web. This cross-platform app development allows you to create the final product faster and cost-effective thanks to just one team of developers working on the app for multiple platforms at the same time.</p>
+
+
+
+<p>This approach shortens the time to market of your app so you can start profiting from a new source faster.</p>
+
+
+
+<h4>Why is React Native development efficient in this case?</h4>
+
+
+
+<p>Having separate applications for multiple platforms is inefficient. What happens most of the time is that there are multiple teams, scattered across different locations, developing the same product, just on a different platform.</p>
+
+
+
+<p>While such setup still remains popular among companies all around the world, it comes with an enormous maintenance cost. It also reduces the velocity of innovations and impacts how quickly business can adapt to the new reality – two key characteristics needed in today’s world.</p>
+
+
+
+<p>On a high-level, each platform receives a dedicated application, made from scratch. And because platforms are fundamentally different from one another, this approach is doomed to fail from the start.</p>
+
+
+
+<p>With separate teams and separate tools, it is challenging to ensure the same set of features and unified user experience on each platform. The majority of businesses end up having a different feature set amongst the platforms, framing the business to have a preferred platform over the rest. Such an impression is unhealthy and automatically encourages the users to look out for better alternatives with a better feature parity for their devices.</p>
+
+
+
+<h4>It reduces development and maintenance costs</h4>
+
+
+
+<p>Another key factor is the development costs. The aforementioned feature imparity is a known problem and businesses were investing a lot of time and money to address it.</p>
+
+
+
+<p>Developing an infrastructure that keeps all the applications in sync and provides seamless user experience is a privilege that only enterprises can afford. As a result – if you are not another Google – your application is likely to end up going that route sooner or later.</p>
+
+
+
+<p>Rather than losing the cash twice – first for developing separate applications and then, for paying the double to align them with each other – wouldn’t it be better to save all that time and effort and create one application that works everywhere? Sounds impossible?</p>
+
+
+
+<p>Fortunately, it’s not.</p>
+
+
+
+<h4>How can I go online with my business and do it faster and less costly?</h4>
+
+
+
+<p>React Native has been developed by Facebook to solve this exact challenge. Being at an enormous size that only a few businesses will ever reach, they are able to foresee a lot of challenges that you might eventually run into.</p>
+
+
+
+<p>With React Native, you can create a universal application that runs and works on all the platforms. You write it once and it is accessible everywhere. From mobile (iOS and Android), to desktop and console games – you can ship your app to all the channels at the same time!</p>
+
+
+
+<p>So, how React Native actually can help here?</p>
+
+
+
+<h4>One app for iOS, Android, Web, and desktop</h4>
+
+
+
+<p>Firstly, React Native allows developers to create a single application that runs on mobile (iOS, Android), Web and Desktop! Having in mind that Android and iOS together won more than 98% of the mobile operating system market, it significantly increases your chances of reaching new clients.</p>
+
+
+
+<h4>Shorter time to market, faster revenue</h4>
+
+
+
+<p>Secondly, thanks to React native unique architecture, developers can work with much more efficiency. To make a long story short, seeing their code-change results is happening much quicker than rebuilding the whole Native app, installing it on a device and then launching it.</p>
+
+
+
+<p>Thanks to the latest tool, “fast refresh” changes in code are almost instantly reflected in the UI. It means that React Native allows you to deliver your app faster, stay ahead of your competitors and start making revenue quicker than others.</p>
+
+
+
+<h3 id="Second_Point_Header">2. You have a web application and want to quickly launch a mobile app to reach a wider audience</h3>
+
+
+
+<p>You might be thinking whether it’s different from the previous one. All in all, in both cases, you don’t have a mobile app and you need to start from scratch. What’s even worse, chances are that you don’t have any mobile engineers on board.</p>
+
+
+
+<p>A lot of companies still limit themselves only to web apps, which reduces their potential reach. The mobile app market is growing faster than you think. The&nbsp;downloads of top-five food delivery apps doubled between 2016 and 2018. On top of that, people are spending more and more time in the apps. An average American use apps for&nbsp;2 hours and 57 minutes per day, out of 3 hours and 43 they spend on their mobiles.</p>
+
+
+
+<p>Android and iOS have more than 98% of the market share and the total number of mobile apps users is still growing. This translates directly into more potential customers.</p>
+
+
+
+<p>As you see, it’s good to be present on both platforms, but I know that hiring two separate teams to create two versions of one app can be very expensive and take a long time to deliver.</p>
+
+
+
+<p>But there is no need to hire two teams. There is a possibility to hire just one that will create a code that runs on iOS and Android. What’s also exciting is that you can reuse part of the code from your existing web app. This is where React Native comes into play.</p>
+
+
+
+<h4>Why is React Native the best way to quickly launch a mobile app?</h4>
+
+
+
+<p>First and foremost – It runs on most popular platforms – iOS, Android, Web, Desktop (Windows and Mac). What’s even more important – it’s flexible and based on JavaScript.</p>
+
+
+
+<p>Why is it so important for you?</p>
+
+
+
+<p>Javascript is the most popular programming technology in the world. It means that most of the websites, probably including yours, are created using this language. Now, you may be wondering – if my web application is JavaScript and React Native is JavaScript, does it mean that my web app can be a native mobile app?</p>
+
+
+
+<p>The answer is yes.</p>
+
+
+
+<h4>Business power of reusable code</h4>
+
+
+
+<p>Thanks to the reusable code of your web app, you can easily transform it into the mobile version, running on every platform.</p>
+
+
+
+<p>Depending on the framework you used, you can take part of this code to create a mobile application.</p>
+
+
+
+<p>For example, if your web application is done in React, it is very likely that you will be able to share most of it with the mobile React Native app. The exact number depends on various technical choices your team has done in the past, such as using an API that is available in React and React Native.</p>
+
+
+
+<p>Code reusability makes the process of&nbsp;<a href="https://callstack.com/react-native-mobile-apps">developing a mobile app</a>&nbsp;faster, time-efficient and cost-effective. And because Javascript is the most popular technology in the world and there is a large number of available JavaScript developers, it also translates into lower costs of development and maintenance.</p>
+
+
+
+<p>So, does it mean that if you don’t have a React application, this doesn’t help you in any way? Wrong!</p>
+
+
+
+<p>When it comes to shipping a mobile app, a unified user interface is not that important. Sure, it’s great to have common building blocks to ensure the harmonized user experience and you can always create them at a later stage. What is more important is sharing the business logic, the way we handle authentication, state and sessions. And you can share that regardless of the underlying framework. Again, the final answer depends on the technical choices that your team has done in the past.</p>
+
+
+
+<p>Long story short – if you have an existing web application, there’s an opportunity for you to reuse some pieces of it in new mobile solutions. This means that in a short time you will not only create a new source of revenue, but you will also stay ahead of your competition.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/development/react-native-help-you-business/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

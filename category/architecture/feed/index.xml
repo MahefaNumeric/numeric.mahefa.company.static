@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Architecture &#8211; Mahefa Numeric</title>
+	<atom:link href="http://n.m.c/category/architecture/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>We are a digital companion</description>
+	<lastBuildDate>Sat, 29 May 2021 19:03:08 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8</generator>
+
+<image>
+	<url>/wp-content/uploads/2021/05/cropped-Mahefa-Numeric-Logo-32x32.png</url>
+	<title>Architecture &#8211; Mahefa Numeric</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>La supervision de Kafka : les mesures importantes</title>
+		<link>/architecture/apache-kafka-measure/</link>
+					<comments>/architecture/apache-kafka-measure/#comments</comments>
+		
+		<dc:creator><![CDATA[Mahefa Abel]]></dc:creator>
+		<pubDate>Sat, 15 May 2021 18:06:23 +0000</pubDate>
+				<category><![CDATA[Architecture]]></category>
+		<guid isPermaLink="false">/?p=1</guid>
+
+					<description><![CDATA[Kafka est une plateforme de diffusion en continu qui agit comme une file d&#8217;attente de messagerie avec publication et abonnement...]]></description>
+										<content:encoded><![CDATA[
+<p>Kafka est une plateforme de diffusion en continu qui agit comme une file d&#8217;attente de messagerie avec publication et abonnement en recevant des données de divers systèmes sources et en les rendant disponibles à divers systèmes et applications en temps réel. Les principaux avantages de l&#8217;utilisation de Kafka sont qu&#8217;il offre un stockage pérenne, ce qui signifie que les données qui y sont stockées ne peuvent pas être facilement altérées, et qu&#8217;il est très évolutif, de sorte qu&#8217;il peut gérer une forte augmentation des utilisateurs, de la charge de travail et des transactions lorsque cela est nécessaire.</p>
+
+
+
+<p>Comme Kafka peut traiter de gros volumes de données, de nombreuses organisations qui s&#8217;occupent de données et d&#8217;événements importants, telles que Netflix et Microsoft, utilisent Kafka. Pour garantir des performances optimales du serveur middleware Kafka et un fonctionnement sans faille des diverses applications critiques qui en dépendent, il est essentiel d&#8217;utiliser une solution de surveillance.</p>
+
+
+
+<p>ManageEngine Applications Manager assure une surveillance proactive de Kafka et vous aide à identifier et à résoudre rapidement les problèmes, avant qu&#8217;ils n&#8217;aient un impact sur vos applications. Kafka rapporte des mesures cruciales qui sont directement liées aux performances de votre serveur Kafka. Laissez-nous vous présenter les principales mesures de performance Kafka que vous devez surveiller pour gérer efficacement vos serveurs Kafka.</p>
+
+
+
+<h3><strong>Utilisation de la mémoire</strong></h3>
+
+
+
+<p>Kafka, contrairement aux autres technologies de middleware, fonctionne entièrement sur la mémoire vive. Comme le bloc d&#8217;outils d&#8217;analyse des utilisateurs nécessite une grande quantité de mémoire dans la RAM, la mémoire du bloc est allouée de manière dynamique en fonction du nombre de requêtes entrantes sur le serveur. Dans un cas Kafka, il est crucial de toujours s&#8217;assurer que la taille du bloc de la machine virtuelle Java (JVM) n&#8217;est pas supérieure à la mémoire vive disponible afin d&#8217;éviter les échanges.</p>
+
+
+
+<p>L&#8217;outil de surveillance Kafka du gestionnaire d&#8217;applications vous permet de surveiller les paramètres de la mémoire tels que la mémoire physique, l&#8217;utilisation de la mémoire virtuelle et l&#8217;utilisation de l&#8217;espace d&#8217;échange. Le suivi de l&#8217;utilisation de l&#8217;espace de pagination permet d&#8217;éviter les temps d&#8217;attente et de prévenir les interruptions d&#8217;exploitation.<img src="https://www.pgsoftware.fr/images/blog/manageengine/Applications_Manager_Kafka-Memory-Usage-768x546.png" alt="Applications Manager Kafka Memory Usage 768x546"></p>
+
+
+
+<p>La MJC de Kafka comporte deux segments : la heap-memory et la non-heap memory. Alors que laheap-memory stocke les objets de données réels, la non heap-memory garde la trace des métadonnées et des objets chargés. Le moniteur Kafka du gestionnaire d&#8217;applications garde une trace de l&#8217;utilisation de votre pile pour vous aider à détecter facilement les fuites de mémoire.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://www.pgsoftware.fr/images/blog/manageengine/Applications_Manager_Kafka-Heap-Details.png" alt="Applications Manager Kafka Heap Details"/></figure>
+
+
+
+<h3><strong>Détails des threads</strong></h3>
+
+
+
+<p>Toutes les demandes dans un serveur sont traitées par des processus qui sont décomposés en plusieurs threads qui s&#8217;exécutent simultanément pour aider à traiter les demandes entrantes plus rapidement. Cela permet de réduire le temps de réponse et d&#8217;améliorer la réactivité du serveur.</p>
+
+
+
+<p>Les fonctionnalités de surveillance du serveur Kafka du gestionnaire d&#8217;applications vous permettent de suivre les threads de la JVM dans votre instance Kafka et de fournir des détails sur les différents threads:</p>
+
+
+
+<ul><li><strong>Daemon Threads:</strong>&nbsp;Ce sont des threads qui n&#8217;empêchent pas la JVM de sortir lorsque le programme se termine alors qu&#8217;ils fonctionnent encore en arrière-plan.</li><li><strong>Live Threads:</strong>&nbsp;Voici les threads qui sont actuellement actifs.</li><li><strong>Peak Threads:</strong>&nbsp;C&#8217;est le nombre maximum de threads exécutés dans la JVM.</li></ul>
+
+
+
+<p>La surveillance des fils de discussion dans la JVM peut s&#8217;avérer utile à bien des égards. En cas de pic soudain dans l&#8217;utilisation du CPU, vous pouvez analyser les détails des threads pour identifier le thread qui en est la cause. La surveillance du nombre de fils de discussion actifs vous aide principalement à déterminer si l&#8217;utilisation actuelle d&#8217;un pool est proche de son maximum. Vous pouvez identifier les fils de discussion inactifs et les supprimer, ce qui permet d&#8217;éviter que les demandes soient rejetées.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://www.pgsoftware.fr/images/blog/manageengine/Applications_Manager_Kafka-Thread-Details-768x549.png" alt="Applications Manager Kafka Thread Details 768x549"/></figure>
+
+
+
+<h3><strong>Taux de nettoyage du journal de bord</strong></h3>
+
+
+
+<p>Les enregistrements de Kafka sont publiés dans un flux d&#8217;enregistrements appelés topics. Chaque topic a un journal partitionné désigné qui demande des détails en annexe chaque fois que des données doivent être stockées. Chaque partition est un journal de commit structuré qui comporte une séquence d&#8217;enregistrements étiquetés et dotés d&#8217;un identifiant séquentiel à des fins d&#8217;identification.</p>
+
+
+
+<p>Ces enregistrements sont écrits sur le disque après une période déterminée, après quoi ils sont effacés des partitions. Le taux de vidange, c&#8217;est-à-dire le temps qu&#8217;il faut pour vider le journal sur le disque, est une mesure importante à surveiller et constitue un indicateur direct des performances de votre instance Kafka.</p>
+
+
+
+<p>Le gestionnaire des applications surveille le taux de vidange du journal et vous informe si la valeur franchit un seuil déterminé. Une valeur élevée du taux de vidange du journal peut entraîner le maintien des demandes dans la file d&#8217;attente, ce qui se traduit par une latence et une dégradation des performances de votre serveur middleware Kafka. Cela indique que vous devrez peut-être vérifier si votre matériel ne présente pas de goulots d&#8217;étranglement ou adapter votre serveur en conséquence.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://www.pgsoftware.fr/images/blog/manageengine/Applications_Manager_Kafka-Log-Details-768x492.png" alt="Applications Manager Kafka Log Details 768x492"/></figure>
+
+
+
+<h3><strong>Broker topic metrics</strong></h3>
+
+
+
+<p>Un serveur efficace traite toujours les demandes rapidement, sans aucune latence. La surveillance des paramètres des broker peut donner une visibilité sur les performances globales de votre serveur Kafka.</p>
+
+
+
+<p>Le gestionnaire des applications surveille diverses mesures de supervision Kafka, y compris les mesures des broker topics, pour vous aider à comprendre le débit et les fluctuations des messages. La surveillance des octets in/min aide à identifier les gros messages, tandis que les messages in/min servent d&#8217;indicateur de la charge sur le serveur. La surveillance des échecs des requêtes de récupération (Fetch Requests/Min) et des échecs des requêtes de production (Produce Requests/Min) peut aider à détecter la dégradation des performances de votre serveur.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://www.pgsoftware.fr/images/blog/manageengine/Applications_Manager_Kafka-Broker-Topic-Metrics-768x546.png" alt="Applications Manager Kafka Broker Topic Metrics 768x546"/></figure>
+
+
+
+<h3><strong>Réplication</strong></h3>
+
+
+
+<p>La réplication dans Kafka implique la création de copies des données afin de garantir leur disponibilité en cas d&#8217;indisponibilité d&#8217;un broker. Cela peut entraîner une dégradation des performances car le broker ne sera pas en mesure de traiter les demandes si celui-ci n&#8217;est pas disponible, ce qui augmente le nombre de Partitions répliquées.</p>
+
+
+
+<p>Un des grands défis de la réplication à Kafka consiste à maintenir le nombre de réplications synchronisées en accord avec le nombre total de réplications. Les répliques qui ne sont pas synchronisées sont les partitions qui se trouvent derrière le leader, et sont retirées du pool de répliques synchronisées (ISR), augmentant ainsi la valeur des IsrShrinks/Min.</p>
+
+
+
+<p>Le gestionnaire d&#8217;applications garde un œil sur les mesures de surveillance critiques d&#8217;Apache Kafka telles que IsrShrinks/Min et IsrExapsnds/Min, Under Replicated Partitions, et vous informe également des dépassements de seuil afin de garantir des performances optimales de votre serveur middleware Kafka.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://www.pgsoftware.fr/images/blog/manageengine/Applications_Manager_Kafka-Replication.png" alt="Applications Manager Kafka Replication"/></figure>
+
+
+
+<h3><strong>Détails du réseau</strong></h3>
+
+
+
+<p>Kafka gère un grand nombre d&#8217;événements. Il est impératif de surveiller le nombre de requêtes par seconde pour avoir une visibilité sur le débit du réseau et la charge du serveur.</p>
+
+
+
+<p>Le gestionnaire des demandes surveille le taux de traitement des demandes et vous informe des pics. Cela peut vous aider à analyser la largeur de bande du broker qui a été affectée afin que vous puissiez augmenter le nombre de brokers utilisés si nécessaire. Il vous aide également à détecter les temps de latence du serveur.</p>
+
+
+
+<figure class="wp-block-image"><img src="https://www.pgsoftware.fr/images/blog/manageengine/Applications_Manager_Kafka-Network-Metrics.png" alt="Applications Manager Kafka Network Metrics"/></figure>
+
+
+
+<h3><strong>Informations sur le contrôleur</strong></h3>
+
+
+
+<p>Dans un cluster Kafka, l&#8217;un des brokers agit en tant que contrôleur et est responsable du maintien de l&#8217;état des partitions et des répliques. Lorsqu&#8217;une partition principale expire, l&#8217;élection d&#8217;une nouvelle autorité est déclenchée. Toute réplique synchronisée disponible pour la partition est éligible pour devenir la nouvelle autorité. L&#8217;élection du référent entraîne un léger retard dans la réponse aux demandes de partition. Gardez un œil sur la mesure du taux d&#8217;élection des autorités.</p>
+
+
+
+<p>Les élections de mauvais référents sont causées par l&#8217;incapacité de trouver une autorité qualifiée pour la partition parmi les brokers de Kafka. Lorsqu&#8217;un broker qui est le référent pour une partition se met hors ligne, un nouveau référent est élu parmi l&#8217;ensemble des ISR pour la partition. L&#8217;élection d&#8217;un référent non conforme est un cas particulier dans lequel aucune réplique disponible n&#8217;est synchronisée. Le gestionnaire d&#8217;applications vous permet de suivre le nombre d&#8217;élections de référents non conformes par seconde et de comprendre s&#8217;il y a eu une perte de données.&nbsp;</p>
+
+
+
+<p>Le décompte des partitions hors ligne vous aide à suivre le nombre de partitions qui ne sont pas inscriptibles ou lisibles car elles n&#8217;ont pas de référent actif. Vous pouvez configurer les paramètres de manière à être alerté si cette valeur dépasse 0, car une partition sans référent actif sera absolument injoignable. Cela signifie que les utilisateurs et les propriétaires de cette partition seront bloqués, ce qui entraînera des retards inutiles dans le traitement des demandes sur le serveur, jusqu&#8217;à ce qu&#8217;un référent soit disponible.</p>
+
+
+
+<h3><strong>Surveiller les mesures du ZooKeeper en même temps que Kafka</strong></h3>
+
+
+
+<p>ZooKeeper stocke des métadonnées sur les brokers de Kafka, les rubriques, les partitions et la coordination du système. Une panne ou une lenteur de ZooKeeper peut affecter les clusters de Kafka. Vous devez également surveiller&nbsp;<a href="https://www.manageengine.com/products/applications_manager/zookeeper-monitoring.html?kafka-blog">les paramètres de ZooKeeper</a>&nbsp;pour maintenir un cluster Kafka sain.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/architecture/apache-kafka-measure/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Un premier aperçu de WSO2 Enterprise Integrator (EI)</title>
+		<link>/architecture/wso2-ei-get-started/</link>
+					<comments>/architecture/wso2-ei-get-started/#respond</comments>
+		
+		<dc:creator><![CDATA[Mahefa Abel]]></dc:creator>
+		<pubDate>Tue, 15 Sep 2020 01:51:29 +0000</pubDate>
+				<category><![CDATA[Architecture]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Education]]></category>
+		<category><![CDATA[Industry]]></category>
+		<category><![CDATA[Management]]></category>
+		<category><![CDATA[Technology]]></category>
+		<guid isPermaLink="false">http://wp.leverage.demo/home-1/?p=62</guid>
+
+					<description><![CDATA[Cela est surprenant car il a été dit que Synapse et AXIS2 devaient être remplacés par un autre moteur de...]]></description>
+										<content:encoded><![CDATA[
+<p>Cela est surprenant car il a été dit que Synapse et AXIS2 devaient être remplacés par un autre moteur de médiation ainsi que le fait que tout serait REST / JSON.</p>
+
+
+
+<p>Il semble maintenant que ce ne soit pas le cas. Cela signifie-t-il qu&#8217;il s&#8217;agit d&#8217;une version intermédiaire?</p>
+
+
+
+<p>Le successeur de l&#8217;Enterprise Service Bus était en cours de développement et un nouveau produit a été lancé lors de la WSO2Con USA 2017. Il s&#8217;appelle WSO2 Enterprise Integrator et dans le blog, nous examinerons ce qui est réellement dans le produit.</p>
+
+
+
+<p>Qu&#8217;est-ce que WSO2 EI?<br>WSO2 Enterprise Integrator-1.png Selon la documentation fournie avec la version M2 du produit EI.</p>
+
+
+
+<p>Product EI est une distribution unifiée de WSO2 Enterprise Integrator, Application Server, Data Services Server aux côtés des environnements d&#8217;exécution Analytics, Business Process et Message Broker. Avec la capacité d&#8217;un répertoire de composants partagé avec une gestion basée sur le profil de chaque runtime.</p>
+
+
+
+<p>En bref, c’est ESB, DSS, AS avec les temps d’exécution de trois autres produits, DAS, BPS et MB.</p>
+
+
+
+<p>Ceci est visible lorsque nous regardons l&#8217;onglet principal. Nous voyons clairement les fonctionnalités Applications (fonctionnalité AS), Proxy et Service Bus (même étonnamment similaires à l&#8217;actuel WSO2 ESB (5.0.0).</p>
+
+
+
+<p>Plus surprenant, nous voyons même le service AAR qui indique que nous avons toujours Axis2 inclus dans le produit. Un test rapide avec le fichier CAR ESB actuel confirme que Synapse / Axis2 est toujours le moteur Medation / Webservice du produit.</p>
+
+
+
+<p>Nous pensons que c&#8217;est vrai car ce n&#8217;est pas sur Carbon 5 mais plutôt sur Carbon 4.4.14. Il est donc probable que ce soit une première étape dans le processus de création d&#8217;un nouveau produit.</p>
+
+
+
+<p>Intégration à profusion</p>
+
+
+
+<p>Il existe une nouvelle structure dans ce cas avec un répertoire principal pour WSO2 EI et des sous-répertoires sous / WSO2 pour chacun des produits.</p>
+
+
+
+<p>Dans chacun de ces répertoires, vous retrouverez la structure du produit. Cela se traduit cependant par une installation de presque 1 Go (installation propre).</p>
+
+
+
+<p>Par défaut, les produits sont installés avec un décalage de port de 1 entre eux. Sur un hôte local, voici les adresses de l&#8217;interface utilisateur de gestion:</p>
+
+
+
+<p>WSO2 EI https: // localhost: 9443 / carbone<br>WSO2 DAS https: // localhost: 9444 / carbon /<br>WSO2 BPS https: // localhost: 9445 / carbon /<br>WSO2 MB https: // localhost: 9446 / carbon /<br></p>
+
+
+
+<p>Compatibilité<br>Nous avons rapidement essayé certains fichiers CAR que nous avions sur nos machines locales et ils ont fonctionné sans accroc. Cela ne veut pas dire que tout est nécessairement compatible. Un test approfondi sur une multitude d&#8217;artefacts devrait donner plus d&#8217;informations sur la compatibilité des artefacts existants (sur ESB 5.0.0) avec WSO2 EI.</p>
+
+
+
+<p>Gestion des API<br>Comme l&#8217;ESB actuel, le WSO2 EI a également la possibilité de pointer vers un gestionnaire d&#8217;API externe. Dans ce cas, la passerelle et l&#8217;éditeur pointent vers un gestionnaire d&#8217;API en dehors de l&#8217;ESB.<br><br>Conclusion<br>WSO2 Enterprise Integrator semble être un produit tout-en-un pour certains des produits les plus couramment utilisés dans l&#8217;espace d&#8217;intégration d&#8217;entreprise. Il vous offre des services de bus de services, de traitement d&#8217;entreprise, d&#8217;intégration de données et d&#8217;application ainsi que des capacités de livraison et de surveillance garanties dans une configuration complète.</p>
+
+
+
+<p>Des produits tels que WSO2 Identity Server, WSO2 API Gateway et d&#8217;autres peuvent compléter cette offre Enterprise Integrator pour créer une architecture pour la plupart, sinon la totalité, de vos besoins d&#8217;intégration.</p>
+
+
+
+<p>Jetez-y un œil et téléchargez-le sur http://wso2.com/integration</p>
+
+
+
+<p>Si vous avez des questions sur ce blog, contactez-nous via la section commentaires de ce blog. Consultez également nos tutoriels WSO2, webinaires ou livres blancs pour plus d&#8217;informations techniques. Besoin de soutien? Nous fournissons une assistance produit WSO2, une assistance au développement WSO2, une assistance opérationnelle WSO2 et des programmes de formation WSO2.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/architecture/wso2-ei-get-started/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
